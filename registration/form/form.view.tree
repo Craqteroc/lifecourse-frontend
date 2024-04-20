@@ -1,0 +1,54 @@
+$lc_registration_form $mol_page
+	message *
+		required \Обязательно
+		adult \18+
+		no_spaces \Без пробелов!
+		need_more_letters \{count} или больше символов
+		need_at \Обязательно использовать @
+		only_one_at \Можно использовать только один @
+		no_tld \Как минимум 2 уровня домена
+		dots_inside \Точки не могут быть на краю
+		no_space_domain \Нельзя использовать пробелы в домене
+		need_username \Имя пользователя обязательно
+		passwords_not_matching \Пароли не совпадают
+	sub / 
+		<= Form $mol_form
+			body /
+				<= AvatarField $mol_form_field
+					name \Фото профиля
+					bid <= avatars_bid \
+					Content <= Avatar_control $mol_attach
+						items? <=> avatars? /string
+				<= Names $mol_form_group
+					sub /
+						<= UsernameField $mol_form_field
+							name \ФИО пользователя
+							Content <= Username $mol_string
+								hint \FIO
+								value? <=> username? \
+							bid?next <= username_bid?next
+				<= PasswordGroup $mol_form_group
+					sub /
+						<= PasswordField $mol_form_field
+							name \Введите пароль
+							Content <= Password $mol_password
+								hint \password
+								value? <=> password? \
+							bid?next <= password_bid?next
+						<= ReplayPasswordField $mol_form_field
+							name \Повторите пароль
+							Content <= ReplayPassword $mol_password
+								hint \replay password
+								value? <=> replaypassword? \
+							bid?next <= replaypassword_bid?next
+				<= EmailField $mol_form_field
+					name \Введите почту
+					Content <= Email $mol_string
+						hint \ivan@mail.ru
+						value? <=> email? \
+					bid?next <= email_bid?next
+				<= ButtonField $mol_form_field
+					Content <= Button $mol_button_major
+						title \Зарегистрироваться
+						click?next <= click?next
+						

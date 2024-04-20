@@ -1,0 +1,34 @@
+$lc_login_form $mol_form
+	message *
+		required \Обязательное поле
+		adult \18+
+		no_spaces \Без пробелов!
+		need_more_letters \{count} или больше символов
+		need_at \Обязательно использовать @
+		only_one_at \Можно использовать только один @
+		no_tld \Как минимум 2 уровня домена
+		dots_inside \Точки не могут быть на краю
+		no_space_domain \Нельзя использовать пробелы в домене
+		need_username \Имя пользователя обязательно
+		passwords_not_matching \Пароли не совпадают
+	title \Вход
+	plugins /
+		<= Theme $mol_theme_auto
+	tools /
+		<= Light $mol_lights_toggle
+	body / 
+		<= UsernameField $mol_form_field
+			name \Имя пользователя
+			Content <= Username $mol_string
+				hint \ivan@mail.ru
+				value? <=> username? \
+			bid?next <= username_bid?next
+		<= PasswordField $mol_form_field
+			name \Пароль
+			Content <= Password $mol_password
+				hint \password
+				value? <=> password? \
+			bid?next <= password_bid?next
+		<= LoginButton $mol_button_major
+			title \Войти
+			click?next <= click?next

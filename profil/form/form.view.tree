@@ -1,0 +1,43 @@
+$lc_profil_form $mol_form
+	body /
+		<= Infome $mol_form
+			title \Обо мне
+			body /
+				<= AvatarField $mol_form_field
+					name \Фото профиля
+					bid <= avatars_bid \
+					Content <= Avatar_control $mol_attach
+						items? <=> avatars? /string
+				<= Names $mol_form_group
+					sub /
+						<= UsernameField $mol_form_field
+							name \ФИО пользователя
+							Content <= FIOContent $mol_string
+								value? <= fiocontent? \
+						<= AgeField $mol_form_field
+							name \Возраст
+							Content <= AgeContent $mol_number
+								- value? <= agecontent? \
+						<= EmailField $mol_form_field
+							name \Почта
+							Content <= EmailContent $mol_string
+								- value? <= emailcontent? \
+				<= University $mol_form_group
+					sub /
+						<= UniField $mol_form_field
+							name \ВУЗ
+							Content <= UniContent $mol_select
+								options <= unilist /
+						<= FacultyField $mol_form_field
+							name \Факультет
+							Content <= FacultyContent $mol_select
+								options <= facultylist /
+						<= DepartField $mol_form_field
+							name \Кафедра
+							Content <= DepartContent $mol_select
+								options <= departlist /
+						<= CityField $mol_form_field
+							name \Город
+							Content <= CityContent $mol_select
+								options <= citylist /
+				<= Buttons $mol_form_group

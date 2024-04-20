@@ -1,0 +1,12 @@
+$lc_profil $mol_book2_catalog
+	spreads *
+		\
+			<= Aboutme $mol_page
+				title \Обо мне
+				body /
+					<= Form $lc_profil_form
+	title \LifeCourse - приветствую Вас в виртуальном мире студента
+	plugins /
+		<= Theme $mol_theme_auto
+	tools /
+		<= Light $mol_lights_toggle

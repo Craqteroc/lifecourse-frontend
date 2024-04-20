@@ -1,0 +1,27 @@
+[mol_form]{
+	align-items: center;
+}
+[lc_login_form_body]{
+align-items: center;
+}
+[lc_login_form_mol_button_major]{
+	width: 50%;
+}
+[lc_login_form_sub]{
+	align-items: center;
+	width: 100%;
+}
+[mol_button_major] {
+	background-color: var(--mol_theme_line);
+	color: var(--mol_theme_focus);
+	width: 50%;
+	align-items: center;
+	display: flex; 
+	justify-content: center; 
+}
+[mol_form_field]{
+	width: 100%;
+}
+[mol_button_major]:active{
+	color: var(--mol_theme_current);
+}

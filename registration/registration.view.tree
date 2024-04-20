@@ -1,0 +1,8 @@
+$lc_registration $mol_page
+	title \LifeCourse
+	plugins /
+		<= Theme $mol_theme_auto
+	tools /
+		<= Light $mol_lights_toggle
+	body /
+		<= Form $lc_registration_form

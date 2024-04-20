@@ -1,0 +1,13 @@
+[lc_profil_form_infome]{
+	display: flex;
+	align-items: center;
+	margin: 0 0 0 10%;
+	width: 70%;
+	max-width: 70%;
+	max-height: 90vh;
+}
+[lc_profil_form_catalog_menu]{
+	flex-grow: 90vh;
+	height: 90vh;
+}
+

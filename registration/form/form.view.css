@@ -1,0 +1,33 @@
+[lc_registration_form_form]{
+	display: grid;
+	place-items: center;
+	height: 90vh;
+	width: 100vw;
+}
+[mol_example]{
+	align-items: center;
+}
+[lc_registration_form_body]{
+align-items: center;
+}
+[lc_registration_form_mol_button_major]{
+	width: 50%;
+}
+[lc_registration_form_sub]{
+	align-items: center;
+	width: 50%;
+}
+[mol_button_major] {
+	background-color: var(--mol_theme_line);
+	color: var(--mol_theme_focus);
+	width: 50%;
+	align-items: center;
+	display: flex; 
+	justify-content: center; 
+}
+[mol_form_field]{
+	width: 100%;
+}
+[mol_button_major]:active{
+	color: var(--mol_theme_current);
+}
