@@ -1,4 +1,4 @@
-name: $lc
+name: $lc_registration
 
 on:
   workflow_dispatch:
@@ -16,9 +16,9 @@ jobs:
     
     - uses: hyoo-ru/mam_build@master2
       with:
-        package: 'lc/'
+        package: 'lc/registration/'
         
     - uses: hyoo-ru/gh-deploy@v4.4.1
       if: github.ref == 'refs/heads/master'
       with:
-        folder: 'lc/-'
+        folder: 'lc/registration/-'
