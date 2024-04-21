@@ -1,6 +1,6 @@
 {
-  "name": "lc_registration",
-  "version": "0.0.1",
+  "name": "lc",
+  "version": "1.0.2",
   "exports": {
     "node": {
       "import": "./node.mjs",
@@ -15,7 +15,6 @@
   "browser": "./web.js",
   "types": "./web.d.ts",
   "keywords": [
-    "$lc_registration",
     "$lc"
   ],
   "dependencies": {}
