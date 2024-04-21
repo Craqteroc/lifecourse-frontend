@@ -1,12 +1,20 @@
 $lc_profil $mol_book2_catalog
 	spreads *
-		\
-			<= Aboutme $mol_page
-				title \Обо мне
-				body /
-					<= Form $lc_profil_form
+		about <= Aboutme $mol_page
+			title \Обо мне
+			body /
+				<= Form $lc_profil_form
+		event <= Event $mol_page
+			title \Мероприятия
+			body /
+				<= Forma $lc_profil_event
+		rank <= Rank $mol_page
+			title \Рейтинг
+			body /
+				<= Forms $lc_profil_rank
 	title \LifeCourse - приветствую Вас в виртуальном мире студента
 	plugins /
 		<= Theme $mol_theme_auto
+	Placeholder null
 	tools /
 		<= Light $mol_lights_toggle

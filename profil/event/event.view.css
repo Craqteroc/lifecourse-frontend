@@ -1,4 +1,4 @@
-[lc_profil_form_infome]{
+[lc_profil_form_event]{
 	display: flex;
 	align-items: center;
 	margin: 0 0 0 10%;
@@ -7,4 +7,7 @@
 	max-height: 90vh;
 	margin: 0 auto;
 	flex-basis: 60rem;
+}
+[mol_text]{
+	margin-bottom: 10%;
 }

@@ -1,0 +1,13 @@
+$lc_profil_rank $mol_form
+	body /
+		<= Rank $mol_form
+			body /
+				<= Serck $mol_form_field
+					Content <= Serch $mol_string
+						hint \Фильтровать
+				<= List $mol_form_group
+					sub /
+						<= RankList $mol_list
+							rows <= rank /$mol_view
+	Rank1* $mol_text
+		text <= rank1* \

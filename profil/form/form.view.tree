@@ -13,15 +13,15 @@ $lc_profil_form $mol_form
 						<= UsernameField $mol_form_field
 							name \ФИО пользователя
 							Content <= FIOContent $mol_string
-								value? <= fiocontent? \
+								value? <=> fiocontent? \
 						<= AgeField $mol_form_field
 							name \Возраст
 							Content <= AgeContent $mol_number
-								- value? <= agecontent? \
+								value? <= agecontent? \
 						<= EmailField $mol_form_field
 							name \Почта
 							Content <= EmailContent $mol_string
-								- value? <= emailcontent? \
+								value? <= emailcontent? \
 				<= University $mol_form_group
 					sub /
 						<= UniField $mol_form_field
@@ -40,4 +40,13 @@ $lc_profil_form $mol_form
 							name \Город
 							Content <= CityContent $mol_select
 								options <= citylist /
+						<= GroupField $mol_form_field
+							name \Группа
+							Content <= GroupContent $mol_select
+								options <= grouplist /
 				<= Buttons $mol_form_group
+					sub /
+						<= ButtonField $mol_form_field
+							Content <= ButtonSave $mol_button_major
+								title \Сохранить
+								click?next <= click?next

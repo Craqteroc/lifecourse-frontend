@@ -1,0 +1,26 @@
+$lc_profil_event $mol_form
+	body /
+		<= Event $mol_form
+			title \Мероприятия
+			body /
+				<= Names $mol_form_group
+					sub /
+						<= SerchField $mol_form_field
+							Content <= Serch $mol_string
+								value? <=> serchpull? \
+								hint \Найти
+						<= AgeField $mol_form_field
+							name \Дата проведения
+							Content <= AgeContent $mol_select
+						<= EmailField $mol_form_field
+							name \Категория
+							Content <= EmailContent $mol_select
+				<= University $mol_form_group
+					sub /
+						<= Eventlist $mol_list
+							rows <= event1 /$mol_view
+	Eventvi $mol_view
+		body /
+			<= Events* $mol_text
+				text <= eventt* \
+			<= Bt $mol_button_major
