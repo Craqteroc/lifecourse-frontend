@@ -1,4 +1,4 @@
-name: $xac_menu
+name: $lc
 
 on:
   workflow_dispatch:
