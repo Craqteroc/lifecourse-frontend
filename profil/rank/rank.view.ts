@@ -8,6 +8,7 @@ namespace $.$${
 			  },  }) as {'students': []};
 
 			  return tr;
+			  
 		}
 		rank(){
 			return this.pullrank()['students'].map(r => this.Rank1(r['id']));
